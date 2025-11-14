@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional locksmith services in Grand Junction, CO. Residential, commercial, automotive, and 24/7 emergency services. Call Grand Junction Key LLC today!">
+    <title>Our Services | Grand Junction Key LLC</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🔑</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== ROOT VARIABLES ===== */
+        :root {
+            --primary-color: #1e3a8a;      /* Deep Blue - Trust & Security */
+            --secondary-color: #d97706;     /* Gold - Keys & Premium */
+            --accent-color: #0ea5e9;        /* Light Blue - Accent */
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --background-light: #f9fafb;
+            --white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Open Sans', sans-serif;
+        }
+        
+        /* ===== GLOBAL RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* ===== TOP BANNER (Grand Junction Web Designs) ===== */
+        .web-designs-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .web-designs-banner a {
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+        
+        .web-designs-banner a:hover {
+            opacity: 0.8;
+        }
+        
+        /* ===== NAVIGATION BAR ===== */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--secondary-color);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0c2a5e 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== SERVICES SECTION ===== */
+        .services-section {
+            padding: 80px 20px;
+            background: var(--background-light);
+        }
+        
+        .service-category {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .service-category:hover {
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+            transform: translateY(-3px);
+        }
+        
+        .service-category-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+        
+        .service-icon {
+            font-size: 60px;
+        }
+        
+        .service-category-header h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+        }
+        
+        .service-intro {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .service-item {
+            background: var(--background-light);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .service-item:hover {
+            border-left-width: 6px;
+            transform: translateX(5px);
+        }
+        
+        .service-item h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+        
+        .service-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        /* ===== EMERGENCY SERVICES CALLOUT ===== */
+        .emergency-callout {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: var(--white);
+            padding: 50px 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 5px 20px rgba(220, 38, 38, 0.3);
+        }
+        
+        .emergency-callout h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .emergency-callout p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+        
+        .emergency-callout .btn {
+            background: var(--white);
+            color: #dc2626;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .emergency-callout .btn:hover {
+            background: var(--background-light);
+            transform: scale(1.05);
+        }
+        
+        /* ===== WHY CHOOSE US SECTION ===== */
+        .why-choose {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .benefit-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+        }
+        
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #b45309 100%);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: #b45309;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+        }
+        
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--background-light);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ===== STICKY BOTTOM BUTTONS ===== */
+        .sticky-buttons {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 0;
+            z-index: 999;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sticky-buttons.hidden {
+            display: none;
+        }
+        
+        .sticky-btn {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .sticky-btn-call {
+            background: var(--success-color);
+            color: var(--white);
+        }
+        
+        .sticky-btn-call:hover {
+            background: #059669;
+        }
+        
+        .sticky-btn-directions {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+        
+        .sticky-btn-directions:hover {
+            background: #b45309;
+        }
+        
+        /* ===== MOBILE RESPONSIVE STYLES ===== */
+        @media (max-width: 768px) {
+            /* Navigation */
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 30px 0;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                padding: 15px 0;
+                width: 100%;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            /* Page Header */
+            .page-header h1 {
+                font-size: 32px;
+            }
+            
+            .page-header p {
+                font-size: 16px;
+            }
+            
+            /* Service Categories */
+            .service-category {
+                padding: 30px 20px;
+            }
+            
+            .service-category-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .service-icon {
+                font-size: 50px;
+            }
+            
+            .service-category-header h2 {
+                font-size: 26px;
+            }
+            
+            .service-intro {
+                font-size: 16px;
+            }
+            
+            .service-list {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Emergency Callout */
+            .emergency-callout {
+                padding: 30px 20px;
+            }
+            
+            .emergency-callout h2 {
+                font-size: 26px;
+            }
+            
+            /* Section Headers */
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            /* Benefits Grid */
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* CTA */
+            .cta-section h2 {
+                font-size: 28px;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            /* Sticky Buttons */
+            .sticky-btn {
+                font-size: 14px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== TOP BANNER ===== -->
+    <div class="web-designs-banner">
+        🌐 Interested in a website like this for your business? Contact <a href="mailto:robert@grandjunctionwebdesigns.com">Grand Junction Web Designs</a>
+    </div>
+    
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🔑</span>
+                <span>Grand Junction Key</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <h1>Our Locksmith Services</h1>
+        <p>Professional, reliable locksmith solutions for your home, business, and vehicle. Available 24/7 throughout the Grand Valley.</p>
+    </section>
+    
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services-section">
+        <div class="container">
+            
+            <!-- Residential Services -->
+            <div class="service-category">
+                <div class="service-category-header">
+                    <div class="service-icon">🏠</div>
+                    <div>
+                        <h2>Residential Locksmith Services</h2>
+                    </div>
+                </div>
+                <p class="service-intro">
+                    Your home is your sanctuary, and we're here to keep it secure. From emergency lockouts to advanced smart lock installations, our residential locksmith services ensure your family and property are protected with the latest security solutions.
+                </p>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Lock Installation & Repair</h3>
+                        <p>Professional installation and repair of all types of residential locks, including deadbolts, doorknobs, and high-security locks.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Home Lockout Assistance</h3>
+                        <p>Locked out of your house? We provide fast, damage-free entry to get you back inside quickly and safely.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Rekeying Services</h3>
+                        <p>Cost-effective rekeying for homes, perfect after moving in, losing keys, or when security may be compromised.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Smart Lock Installation</h3>
+                        <p>Upgrade to modern smart locks with keyless entry, remote access, and enhanced security features for your home.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Security Consultations</h3>
+                        <p>Expert assessment of your home's security vulnerabilities with professional recommendations for improvements.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Master Key Systems</h3>
+                        <p>Convenient master key systems that provide flexible access control for your entire property.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Commercial Services -->
+            <div class="service-category">
+                <div class="service-category-header">
+                    <div class="service-icon">🏢</div>
+                    <div>
+                        <h2>Commercial Locksmith Services</h2>
+                    </div>
+                </div>
+                <p class="service-intro">
+                    Protect your business with professional-grade security solutions. We understand that your business security needs are unique, which is why we offer comprehensive commercial locksmith services tailored to businesses of all sizes.
+                </p>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Master Key Systems</h3>
+                        <p>Sophisticated master key systems that give you control over who accesses different areas of your business.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>High-Security Lock Installation</h3>
+                        <p>Commercial-grade high-security locks that resist picking, drilling, and unauthorized key duplication.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Office Lockout Assistance</h3>
+                        <p>Fast response to office lockouts to minimize business downtime and get your team back to work.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Access Control Systems</h3>
+                        <p>Advanced electronic access control with keycards, keypads, and biometric systems for enhanced security.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Lock Maintenance Programs</h3>
+                        <p>Regular maintenance services to keep your commercial locks functioning properly and extend their lifespan.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Emergency Exit Devices</h3>
+                        <p>Installation and repair of panic bars and emergency exit hardware to ensure safety compliance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Automotive Services -->
+            <div class="service-category">
+                <div class="service-category-header">
+                    <div class="service-icon">🚗</div>
+                    <div>
+                        <h2>Automotive Locksmith Services</h2>
+                    </div>
+                </div>
+                <p class="service-intro">
+                    Locked out of your vehicle? Lost your car keys? Our mobile automotive locksmith services come directly to you, equipped with the latest technology to handle all makes and models efficiently.
+                </p>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Car Lockout Service</h3>
+                        <p>Quick and damage-free vehicle entry when you're locked out, available 24/7 anywhere in the Grand Valley.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Key Duplication & Replacement</h3>
+                        <p>On-site key cutting and replacement for traditional keys, transponder keys, and key fobs.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Transponder Key Programming</h3>
+                        <p>Professional programming of chip keys and transponders for modern vehicles with advanced security systems.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Ignition Repair & Replacement</h3>
+                        <p>Expert diagnosis and repair of faulty ignitions, including complete ignition cylinder replacement when needed.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Broken Key Extraction</h3>
+                        <p>Safe removal of broken keys from locks, ignitions, and door cylinders without causing damage.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Emergency Car Opening</h3>
+                        <p>Fast emergency service for vehicle lockouts in parking lots, at home, or on the roadside.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emergency Services Callout -->
+            <div class="emergency-callout">
+                <h2>🚨 24/7 Emergency Locksmith Services</h2>
+                <p>Emergencies don't wait for business hours, and neither do we. Whether you're locked out at 2 AM or need urgent lock repairs after a break-in, our emergency locksmith team is available around the clock, every day of the year.</p>
+                <a href="tel:970-XXX-XXXX" class="btn">📞 Call Emergency Line: (970) XXX-XXXX</a>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Grand Junction Key LLC?</h2>
+                <p>We're committed to providing exceptional locksmith services that exceed your expectations.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>Quick arrival times with our strategically located mobile units throughout the Grand Valley.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Expert Technicians</h3>
+                    <p>Highly trained professionals with years of experience and the latest locksmith technology.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Fair Pricing</h3>
+                    <p>Competitive rates with transparent pricing and no hidden fees or surprise charges.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>We stand behind our work with a satisfaction guarantee on all services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== CTA SECTION ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Secure Your Property?</h2>
+            <p>Contact us today for professional locksmith services you can trust.</p>
+            <div class="btn-group">
+                <a href="tel:970-XXX-XXXX" class="btn btn-secondary">📞 Call (970) XXX-XXXX</a>
+                <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Grand Junction Key LLC</h3>
+                <p>Your trusted partner for all locksmith needs in the Grand Valley. Professional, reliable, and available 24/7.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📞 Phone: (970) XXX-XXXX</p>
+                <p>📧 Email: info@grandjunctionkey.com</p>
+                <p>🕐 Hours: 24/7 Emergency Service</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Service Areas</h3>
+                <p>Grand Junction, Fruita, Palisade, Clifton, Orchard Mesa, and surrounding areas</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grand Junction Key LLC. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- ===== STICKY BOTTOM BUTTONS ===== -->
+    <div class="sticky-buttons" id="stickyButtons">
+        <a href="tel:970-XXX-XXXX" class="sticky-btn sticky-btn-call">
+            📞 Call Now
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Grand+Junction+CO" target="_blank" class="sticky-btn sticky-btn-directions">
+            📍 Get Directions
+        </a>
+    </div>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // ===== HIDE STICKY BUTTONS AT FOOTER =====
+        const stickyButtons = document.getElementById('stickyButtons');
+        const footer = document.querySelector('.footer');
+        
+        function checkStickyButtons() {
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Hide buttons when footer is visible
+            if (footerRect.top < windowHeight) {
+                stickyButtons.classList.add('hidden');
+            } else {
+                stickyButtons.classList.remove('hidden');
+            }
+        }
+        
+        // Check on scroll and initial load
+        window.addEventListener('scroll', checkStickyButtons);
+        window.addEventListener('load', checkStickyButtons);
+    </script>
+</body>
+</html>
