@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Grand Junction Key LLC for professional locksmith services in Grand Junction, CO. Call us 24/7 for emergency assistance or schedule an appointment.">
+    <title>Contact Us | Grand Junction Key LLC</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🔑</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== ROOT VARIABLES ===== */
+        :root {
+            --primary-color: #1e3a8a;      /* Deep Blue - Trust & Security */
+            --secondary-color: #d97706;     /* Gold - Keys & Premium */
+            --accent-color: #0ea5e9;        /* Light Blue - Accent */
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --background-light: #f9fafb;
+            --white: #ffffff;
+            --border-color: #e5e7eb;
+            --success-color: #10b981;
+            --error-color: #dc2626;
+            --heading-font: 'Montserrat', sans-serif;
+            --body-font: 'Open Sans', sans-serif;
+        }
+        
+        /* ===== GLOBAL RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* ===== TOP BANNER (Grand Junction Web Designs) ===== */
+        .web-designs-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            position: relative;
+            z-index: 1001;
+        }
+        
+        .web-designs-banner a {
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+        
+        .web-designs-banner a:hover {
+            opacity: 0.8;
+        }
+        
+        /* ===== NAVIGATION BAR ===== */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--secondary-color);
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0c2a5e 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 80px 20px;
+            background: var(--background-light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        /* Contact Info Cards */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .info-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .info-icon {
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+        
+        .info-content h3 {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .info-content p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .info-content a {
+            color: var(--secondary-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .info-content a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Contact Form */
+        .contact-form-wrapper {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-form-wrapper h2 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .form-subtitle {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: var(--body-font);
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-group.error input,
+        .form-group.error textarea,
+        .form-group.error select {
+            border-color: var(--error-color);
+        }
+        
+        .error-message {
+            color: var(--error-color);
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .form-group.error .error-message {
+            display: block;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            font-family: var(--heading-font);
+        }
+        
+        .btn-primary {
+            background: var(--secondary-color);
+            color: var(--white);
+            width: 100%;
+        }
+        
+        .btn-primary:hover {
+            background: #b45309;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+        }
+        
+        .btn-primary:disabled {
+            background: var(--text-light);
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Success Message */
+        .success-message {
+            background: var(--success-color);
+            color: var(--white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* ===== SERVICE AREAS SECTION ===== */
+        .service-areas {
+            padding: 80px 20px;
+            background: var(--white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .area-card {
+            background: var(--background-light);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .area-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .area-card h3 {
+            font-size: 22px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .area-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+        
+        /* ===== EMERGENCY CTA ===== */
+        .emergency-cta {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .emergency-cta h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .emergency-cta p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .emergency-cta .btn {
+            background: var(--white);
+            color: #dc2626;
+            font-size: 20px;
+            padding: 16px 40px;
+        }
+        
+        .emergency-cta .btn:hover {
+            background: var(--background-light);
+            transform: scale(1.05);
+        }
+        
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 20px 30px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* ===== STICKY BOTTOM BUTTONS ===== */
+        .sticky-buttons {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            gap: 0;
+            z-index: 999;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sticky-buttons.hidden {
+            display: none;
+        }
+        
+        .sticky-btn {
+            flex: 1;
+            padding: 16px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .sticky-btn-call {
+            background: var(--success-color);
+            color: var(--white);
+        }
+        
+        .sticky-btn-call:hover {
+            background: #059669;
+        }
+        
+        .sticky-btn-directions {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+        
+        .sticky-btn-directions:hover {
+            background: #b45309;
+        }
+        
+        /* ===== MOBILE RESPONSIVE STYLES ===== */
+        @media (max-width: 768px) {
+            /* Navigation */
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: left 0.3s ease;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 30px 0;
+                gap: 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                padding: 15px 0;
+                width: 100%;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            /* Page Header */
+            .page-header h1 {
+                font-size: 32px;
+            }
+            
+            .page-header p {
+                font-size: 16px;
+            }
+            
+            /* Contact Grid */
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            /* Contact Form */
+            .contact-form-wrapper {
+                padding: 30px 20px;
+            }
+            
+            .contact-form-wrapper h2 {
+                font-size: 24px;
+            }
+            
+            /* Areas Grid */
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Section Headers */
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            /* Emergency CTA */
+            .emergency-cta h2 {
+                font-size: 28px;
+            }
+            
+            .emergency-cta p {
+                font-size: 18px;
+            }
+            
+            .emergency-cta .btn {
+                font-size: 18px;
+                padding: 14px 32px;
+            }
+            
+            /* Sticky Buttons */
+            .sticky-btn {
+                font-size: 14px;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== TOP BANNER ===== -->
+    <div class="web-designs-banner">
+        🌐 Interested in a website like this for your business? Contact <a href="mailto:robert@grandjunctionwebdesigns.com">Grand Junction Web Designs</a>
+    </div>
+    
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🔑</span>
+                <span>Grand Junction Key</span>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <h1>Get In Touch</h1>
+        <p>Need a locksmith? We're here to help 24/7. Call us for immediate assistance or use the form below to schedule a service.</p>
+    </section>
+    
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>Call Us 24/7</h3>
+                            <p>Available round the clock for emergency and scheduled services.</p>
+                            <a href="tel:970-XXX-XXXX">(970) XXX-XXXX</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <div class="info-content">
+                            <h3>Email Us</h3>
+                            <p>Send us your questions or service requests via email.</p>
+                            <a href="mailto:info@grandjunctionkey.com">info@grandjunctionkey.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🕐</div>
+                        <div class="info-content">
+                            <h3>Business Hours</h3>
+                            <p><strong>Emergency Service:</strong> 24/7/365<br>
+                            <strong>Office Hours:</strong> Mon-Fri 8:00 AM - 6:00 PM<br>
+                            <strong>Weekend:</strong> Sat-Sun 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>Service Area</h3>
+                            <p>Serving Grand Junction and surrounding communities including Fruita, Palisade, Clifton, and Orchard Mesa.</p>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Grand+Junction+CO" target="_blank">Get Directions →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Request a Service</h2>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    
+                    <div class="success-message" id="successMessage">
+                        ✓ Thank you! Your message has been sent successfully. We'll contact you soon.
+                    </div>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message">Please enter your name</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message">Please enter a valid phone number</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message">Please enter a valid email address</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service...</option>
+                                <option value="residential">Residential Locksmith</option>
+                                <option value="commercial">Commercial Locksmith</option>
+                                <option value="automotive">Automotive Locksmith</option>
+                                <option value="emergency">Emergency Lockout</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message">Please select a service</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please describe your locksmith needs..."></textarea>
+                            <span class="error-message">Please enter a message</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submitBtn">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== SERVICE AREAS ===== -->
+    <section class="service-areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>We Serve the Entire Grand Valley</h2>
+                <p>Fast, reliable locksmith services throughout Grand Junction and surrounding communities.</p>
+            </div>
+            
+            <div class="areas-grid">
+                <div class="area-card">
+                    <h3>Grand Junction</h3>
+                    <p>Full locksmith services for the heart of the Grand Valley</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Fruita</h3>
+                    <p>Residential, commercial & automotive locksmith solutions</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Palisade</h3>
+                    <p>Expert lock and key services for homes and businesses</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Clifton</h3>
+                    <p>24/7 emergency locksmith and security services</p>
+                </div>
+                
+                <div class="area-card">
+                    <h3>Orchard Mesa</h3>
+                    <p>Professional locksmith services you can trust</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== EMERGENCY CTA ===== -->
+    <section class="emergency-cta">
+        <div class="container">
+            <h2>🚨 Need Emergency Locksmith Service?</h2>
+            <p>Don't wait! Call us now for immediate assistance 24/7.</p>
+            <a href="tel:970-XXX-XXXX" class="btn">📞 Call Emergency Line: (970) XXX-XXXX</a>
+        </div>
+    </section>
+    
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Grand Junction Key LLC</h3>
+                <p>Your trusted partner for all locksmith needs in the Grand Valley. Professional, reliable, and available 24/7.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>📞 Phone: (970) XXX-XXXX</p>
+                <p>📧 Email: info@grandjunctionkey.com</p>
+                <p>🕐 Hours: 24/7 Emergency Service</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Service Areas</h3>
+                <p>Grand Junction, Fruita, Palisade, Clifton, Orchard Mesa, and surrounding areas</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grand Junction Key LLC. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- ===== STICKY BOTTOM BUTTONS ===== -->
+    <div class="sticky-buttons" id="stickyButtons">
+        <a href="tel:970-XXX-XXXX" class="sticky-btn sticky-btn-call">
+            📞 Call Now
+        </a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Grand+Junction+CO" target="_blank" class="sticky-btn sticky-btn-directions">
+            📍 Get Directions
+        </a>
+    </div>
+    
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== MOBILE MENU TOGGLE =====
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+        
+        // ===== CONTACT FORM VALIDATION & SUBMISSION =====
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const successMessage = document.getElementById('successMessage');
+        
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        // Phone validation regex (flexible format)
+        const phoneRegex = /^[\d\s\-\(\)]+$/;
+        
+        // Form field validation
+        function validateField(field) {
+            const formGroup = field.closest('.form-group');
+            let isValid = true;
+            
+            // Check if field is empty
+            if (!field.value.trim()) {
+                isValid = false;
+            }
+            
+            // Additional validation for specific fields
+            if (field.type === 'email' && field.value.trim()) {
+                isValid = emailRegex.test(field.value.trim());
+            }
+            
+            if (field.type === 'tel' && field.value.trim()) {
+                isValid = phoneRegex.test(field.value.trim()) && field.value.trim().length >= 10;
+            }
+            
+            // Update UI based on validation
+            if (isValid) {
+                formGroup.classList.remove('error');
+            } else {
+                formGroup.classList.add('error');
+            }
+            
+            return isValid;
+        }
+        
+        // Validate on input blur
+        const formInputs = contactForm.querySelectorAll('input, textarea, select');
+        formInputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                validateField(input);
+            });
+            
+            // Remove error on input
+            input.addEventListener('input', () => {
+                const formGroup = input.closest('.form-group');
+                if (formGroup.classList.contains('error')) {
+                    validateField(input);
+                }
+            });
+        });
+        
+        // Form submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all fields
+            let isFormValid = true;
+            formInputs.forEach(input => {
+                if (!validateField(input)) {
+                    isFormValid = false;
+                }
+            });
+            
+            // If form is valid, simulate submission
+            if (isFormValid) {
+                // Disable submit button
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+                
+                // Simulate API call
+                setTimeout(() => {
+                    // Show success message
+                    successMessage.classList.add('show');
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 5000);
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 1500);
+            } else {
+                // Scroll to first error
+                const firstError = contactForm.querySelector('.form-group.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+        
+        // ===== HIDE STICKY BUTTONS AT FOOTER =====
+        const stickyButtons = document.getElementById('stickyButtons');
+        const footer = document.querySelector('.footer');
+        
+        function checkStickyButtons() {
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Hide buttons when footer is visible
+            if (footerRect.top < windowHeight) {
+                stickyButtons.classList.add('hidden');
+            } else {
+                stickyButtons.classList.remove('hidden');
+            }
+        }
+        
+        // Check on scroll and initial load
+        window.addEventListener('scroll', checkStickyButtons);
+        window.addEventListener('load', checkStickyButtons);
+    </script>
+</body>
+</html>
